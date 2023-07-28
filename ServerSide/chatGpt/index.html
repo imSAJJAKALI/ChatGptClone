@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT</title>
+    <style>
+      .main{
+         width:50%;
+         /* height:500px; */
+         margin: auto;
+         margin-top: 50px;
+         /* border:1px solid gray; */
+      }
+      #search{
+         width:60%;
+         margin: auto;
+         margin-top: 20px;
+         font-size: 15px;
+         padding: 10px;
+         display: block;
+         border: 1px solid black;
+         border-radius: 5px;
+         background-color: rgb(201, 196, 196);
+      }
+      button{
+         width: 20%;
+         display: block;
+         margin: auto;
+         font-size: 15px;
+         padding: 10px;
+         border-radius: 10px;
+         background-color: skyblue;
+         margin-top: 20px;
+      }
+      .main_t{
+         width:50%;
+         height:400px;
+         margin: auto;
+         color: #000;
+         margin-top: 10px;
+         border:1px solid gray;
+         text-align: center;
+      }
+    </style>
+</head>
+<body>
+ <div class="main">
+    <input type="text" placeholder="Type Here" id="search">
+    <button onclick="Onsubmit()">Submit</button>
+ </div>
+ <div class="main_t">
+    <h3 id="Output"></h3>
+ </div> 
+</body>
+</html>
+<script>
+   const inputEl=document.getElementById("search")
+   const textEl=document.getElementById("Output")
+   function Onsubmit(){
+      event.preventDefault();
+      const payload={
+         message:inputEl.value
+      }
+      console.log(payload)
+      fetch("http://localhost:4500/chat",{
+         method:"POST",
+         headers:{
+            "Content-Type":"application/json"
+         },
+         body:JSON.stringify(payload)
+      })
+      .then((res)=>res.json())
+      .then((data)=>{
+         console.log(data)
+         textEl.innerHTML=data.answer;
+      })
+      .catch((error)=>{
+         console.log(error)
+      })
+   }
+</script>
