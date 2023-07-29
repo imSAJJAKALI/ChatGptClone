@@ -35,10 +35,10 @@ InterviewBot is an AI-powered interview preparation and practice tool that helps
 
 ## Technologies Used
 
-- Frontend: HTML, CSS, JavaScript
+- Frontend: React, Typescript, Tailwindcss
 - Backend: Node.js, Express.js
 - Database: MongoDB
-- AI Model: OpenAI GPT-3.5
+- AI Model: OpenAI GPT-3.5,text-DaVinci-003
 
 ## Installation
 
