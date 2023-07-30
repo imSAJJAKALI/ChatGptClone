@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+  
+
+.Box{
+    width: 95%;
+    margin: auto;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.Box1{
+    width: 45%;
+    margin: auto;
+    border: 1px solid blue;
+    border-radius: 15px;
+    padding: 5%;
+    text-align: left;
+    height: 350px;
+    color: rgb(236, 232, 232);
+    background-color: rgb(5, 5, 41);
+    font-family: Cairo;
+}
+.Box1 h1{
+    font-size: 32px;
+    font-weight: 800;
+    font-family: Cairo;
+}
+.Box1 button{
+    margin-top: 25px;
+    border: 2px solid blue;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: Cairo;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: blue;
+}
+button:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: rgb(89, 174, 223);
+}
+.Box2{
+    width: 45%;
+    margin: auto;
+    padding: 2%;
+    border: 1px solid blue;
+    border-radius: 15px;
+    height: 350px;
+    background-color: rgb(5, 5, 41);
+}
+.Box2 img{
+    border-radius: 15px;
+}
+.Tech{
+    width: 95%;
+    margin: auto;
+}
